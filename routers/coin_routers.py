@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from apscheduler.schedulers.background import BackgroundScheduler
 from config.config_base import SessionLocal
 from models.coin import Price
+from config.config_base import Base, engine
 
 
 coin_router= APIRouter()
@@ -45,7 +46,8 @@ scheduler.start()
 
 @coin_router.on_event("startup")
 async def startup_event():
-    update_prices()  # Actualizar los precios al iniciar la aplicación
+   Base.metadata.create_all(bind=engine)  # Actualizar los precios al iniciar la aplicación
+   update_prices()
 
 @coin_router.get("/prices")
 def read_prices():

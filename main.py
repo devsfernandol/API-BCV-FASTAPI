@@ -5,7 +5,8 @@ from sqlalchemy.orm import sessionmaker
 import requests
 from bs4 import BeautifulSoup
 from apscheduler.schedulers.background import BackgroundScheduler
-from config.config_base import Price, Base, SessionLocal
+from config.config_base import SessionLocal
+from models.coin import Price
 
 
 app = FastAPI()

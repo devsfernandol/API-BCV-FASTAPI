@@ -30,6 +30,6 @@ def read_prices():
 def force_update_prices():
     try:
         update_prices()
-        return {"message": "Prices updated successfully"}
+        return JSONResponse(status_code=200 ,content={"Message":"Actualizada Divisas"})
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

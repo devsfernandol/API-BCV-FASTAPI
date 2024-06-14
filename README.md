@@ -1,47 +1,47 @@
-# 📊 API de Precios de Divisas del BCV
+# 📊 BCV Currency Prices API
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-## Descripción
+## Description
 
-API construida con FastAPI que proporciona datos actualizados sobre los precios de las monedas y divisas del Banco Central de Venezuela. Este proyecto tiene fines educativos.
+API built with FastAPI that provides up-to-date data on the prices of currencies from the Central Bank of Venezuela. This project is for educational purposes.
 
-## Características
+## Features
 
-- **Endpoints RESTful:** Acceso sencillo a los datos de precios.
-- **Actualizaciones en Tiempo Real:** Precios siempre actualizados.
-- **Construida con FastAPI:** Alto rendimiento y simplicidad.
+- **RESTful Endpoints:** Easy access to price data.
+- **Real-Time Updates:** Always get the latest prices.
+- **Built with FastAPI:** High performance and simplicity.
 
-## Instalación
+## Installation
 
-1. Clona el repositorio:
+1. Clone the repository:
     ```bash
-    git clone https://github.com/tu-usuario/tu-repo.git
+    git clone https://github.com/your-username/your-repo.git
     ```
-2. Navega al directorio del proyecto:
+2. Navigate to the project directory:
     ```bash
-    cd tu-repo
+    cd your-repo
     ```
-3. Crea un entorno virtual:
+3. Create a virtual environment:
     ```bash
     python3 -m venv venv
     source venv/bin/activate
     ```
-4. Instala las dependencias:
+4. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
-5. Inicia la aplicación:
+5. Start the application:
     ```bash
     uvicorn main:app --reload
     ```
 
-## Uso
+## Usage
 
-Accede a la documentación interactiva de la API en `http://127.0.0.1:8000/docs` para explorar los endpoints y probar las diferentes funcionalidades.
+Access the interactive API documentation at `http://127.0.0.1:8000/docs` to explore the endpoints and test different functionalities.
 
-## Nota Importante
+## Important Note
 
-Este proyecto es únicamente para fines educativos. No se recomienda su uso en entornos comerciales.
+This project is for educational purposes only. Not recommended for commercial use.

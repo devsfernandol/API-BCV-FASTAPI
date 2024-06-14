@@ -16,14 +16,14 @@ async def startup_event():
    Base.metadata.create_all(bind=engine)  # Crear base de datos 
    update_prices() #actulizar coin 
 
-@coin_router.get("/prices")
+@coin_router.get("/prices", tags=['Divisas BCV Coins'], status_code=200)
 def read_prices():
     db = SessionLocal()
     prices = db.query(Price).all()
     db.close()
     return {price.currency: price.value for price in prices}
 
-@coin_router.post("/update-prices")
+@coin_router.post("/update-prices", tags=['Divisas BCV Coins'], status_code=200)
 def force_update_prices():
     try:
         update_prices()

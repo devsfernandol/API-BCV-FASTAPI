@@ -34,6 +34,12 @@ def update_prices():
         db.close()
 
 
+def query_prices():
+    db= SessionLocal()
+    prices= db.query(Price).all()
+    db.close
+    return prices
+
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(update_prices, 'interval', hours=1)
